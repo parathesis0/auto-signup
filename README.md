@@ -41,6 +41,20 @@ python3 main.py -u 学号 -p $(cat ./password.txt) --no-output
 
 可以用`crontab`等方法定时运行脚本。
 
+#### crontab
+
+```bash
+crontab -u 用户名 -e
+```
+
+添加一行（每天22:00运行）：
+
+```
+0 22 * * * python3 /path/to/main.py -u 学号 -p $(cat /path/to/password.txt) --no-output
+```
+
+保存即可。
+
 ### Windows
 
 建议自行研究。
